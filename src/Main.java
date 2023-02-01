@@ -6,7 +6,7 @@ public class Main {
 
         isOK_consola = EntradaSalida.salida("Hola", EntradaSalida.SALIDA_CONSOLA);
         if (!isOK_consola) System.out.println("ERROR CONSOLA");
-        isOK_ventana = EntradaSalida.salida("Hello world", EntradaSalida.SALIDA_WINDOW);
+        isOK_ventana = EntradaSalida.salida("Mensaje en una ventana", EntradaSalida.SALIDA_WINDOW);
         if (!isOK_ventana) System.out.println("ERROR VENTANA");
     }
 }

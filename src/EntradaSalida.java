@@ -4,7 +4,7 @@ import javax.swing.*;
  * Libreria para sacar por dispositivos un mensaje y
  * pedir por consola distintos tipos de datos
  * @version 0.1
- * @author Damian Nogueiras
+ * @author Fernando Lago
  */
 public class EntradaSalida {
     /**
