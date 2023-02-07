@@ -1,4 +1,5 @@
 import javax.swing.*;
+import java.util.Scanner;
 
 /**
  * Libreria para sacar por dispositivos un mensaje y
@@ -49,10 +50,37 @@ public class EntradaSalida {
 
     /**
      * TODO método para obtener distintos tipos de datos por consola
-     * @param comentario
-     * @return
+     * @param palabras para el mensaje del usuario
+     * @return si es true, sino false
      */
-    public static String entrada(String comentario){
-        return "";
+    public static boolean numero(String palabras){
+        Scanner pedir = new Scanner(System.in);
+        int numero;
+        try{
+            System.out.println(palabras);
+            numero = pedir.nextInt();
+            System.out.println("el numero que has introducido es " + numero);
+            return true;
+        }
+        catch (Exception e){
+            System.out.println("No has introducido un numero, pusiste lo que te dio la gana menos eso");
+            return false;
+        }
+
+    }
+    public static boolean letras(String palabras){
+        Scanner pedir = new Scanner(System.in);
+        String cosa="";
+        try{
+            System.out.println(palabras);
+            cosa = pedir.nextLine();
+            System.out.println("el mensaje que has introducido es " + cosa);
+            return true;
+        }
+        catch (Exception e){
+            System.out.println("No has introducido un mensaje, pusiste lo que te dio la gana menos eso");
+            return false;
+        }
+
     }
 }
