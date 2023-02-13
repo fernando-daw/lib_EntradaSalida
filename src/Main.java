@@ -12,6 +12,7 @@ public class Main {
         EntradaSalida.letras("Introduce el mensaje que quieras");
         EntradaSalida.numero("Introduce el numero entero que quieras");
 
+        EntradaSalida.calculadora(5,6,suma);
 
     }
 }

@@ -83,4 +83,42 @@ public class EntradaSalida {
         }
 
     }
+
+    public static int calculadora (float num1,float num2, char operacion ){
+        Scanner pedir = new Scanner(System.in);
+        char suma = 0;
+        char resta = 0;
+        char multiplicacion = 0;
+        char division = 0;
+
+        float numero1;
+        float numero2;
+        float resultado = 0;
+        System.out.println("Primer numero");
+        numero1 = pedir.nextFloat();
+        System.out.println("Segundo numero");
+        numero2 = pedir.nextFloat();
+        switch (operacion){
+
+            case suma:
+                resultado = numero1 + numero2;
+                break;
+            case resta:
+                resultado = numero1-numero2;
+                break;
+            case multiplicacion:
+                resultado = numero1*numero2;
+                break;
+            case division:
+                resultado= numero1/numero2;
+                break;
+            default:
+                System.out.println("No has introducido una opcion correcta");
+
+        }
+
+        return (int) resultado;
+    }
+
+
 }
