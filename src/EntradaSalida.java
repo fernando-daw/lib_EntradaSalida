@@ -83,6 +83,11 @@ public class EntradaSalida {
         }
 
     }
+    /**
+     * TODO método para obtener distintos tipos de datos por consola
+     * @param operacion para el mensaje del usuario
+     * @return resultado dependidiendo de la operacion que se quiera realizar
+     */
 
     public static int calculadora (float num1,float num2, char operacion ){
         Scanner pedir = new Scanner(System.in);
