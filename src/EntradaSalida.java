@@ -89,41 +89,86 @@ public class EntradaSalida {
      * @return resultado dependidiendo de la operacion que se quiera realizar
      */
 
-    public static int calculadora (float num1,float num2, char operacion ){
-        Scanner pedir = new Scanner(System.in);
-        char suma = 0;
-        char resta = 0;
-        char multiplicacion = 0;
-        char division = 0;
+    public class calculadora {
+        /**
+         * opciones de las que dispone la calculadora
+         */
+        public static final int suma =1;
+        public static final int resta =2;
+        public static final int multiplicar =3;
+        public static final int dividir =4;
+        public static final int raiz =5;
+        public static float  resul = 0;
 
-        float numero1;
-        float numero2;
-        float resultado = 0;
-        System.out.println("Primer numero");
-        numero1 = pedir.nextFloat();
-        System.out.println("Segundo numero");
-        numero2 = pedir.nextFloat();
-        switch (operacion){
+        /**
+         * Funcion para obtener numeros enteros por consola
+         *
+         * @param num1
+         * @param num2
+         * @param resultado que nos devolvera el resultado de la operacion
+         * @return si es true: correcto si no false
+         */
 
-            case suma:
-                resultado = numero1 + numero2;
-                break;
-            case resta:
-                resultado = numero1-numero2;
-                break;
-            case multiplicacion:
-                resultado = numero1*numero2;
-                break;
-            case division:
-                resultado= numero1/numero2;
-                break;
-            default:
-                System.out.println("No has introducido una opcion correcta");
+        public static float calculadora(float num1,float num2, int resultado){
 
+
+            switch (resultado){
+                case suma:
+                    try{
+                        float sumar = num1+num2;
+                        System.out.println("EL resultado de la suma es: " + sumar );
+                        resul=sumar;
+
+
+                    }catch (Exception error){
+                        System.out.println("Error al realizar la operacion");
+                        System.out.println(error.getMessage());
+                    }
+                    break;
+                case resta:
+                    try{
+                        float restar = num1-num2;
+                        System.out.println("EL resultado de la resta es: " + restar );
+                        resul=restar;
+                    }catch (Exception error){
+                        System.out.println("Error al realizar la operacion");
+                        System.out.println(error.getMessage());
+                    }
+                    break;
+                case multiplicar:
+                    try{
+                        float multiplicacion = num1*num2;
+                        System.out.println("EL resultado de la suma es: " + multiplicacion );
+                        resul=multiplicacion;
+
+
+                    }catch (Exception error){
+                        System.out.println("Error al realizar la operacion");
+                        System.out.println(error.getMessage());
+                    }
+                    break;
+                case dividir:
+                    try{
+                        float division = num1/num2;
+                        System.out.println("EL resultado de la resta es: " + division );
+                        resul=division;
+                    }catch (Exception error){
+                        System.out.println("Error al realizar la operacion");
+                        System.out.println(error.getMessage());
+                    }
+                    break;
+                case raiz:
+                    try{
+
+                    }catch (Exception error){
+                        System.out.println("Error al realizar la operacion");
+                        System.out.println(error.getMessage());
+                    }
+                    break;
+            }
+            return resul;
         }
 
-        return (int) resultado;
+
     }
-
-
 }
