@@ -159,6 +159,14 @@ public class EntradaSalida {
                     break;
                 case raiz:
                     try{
+                        if (num1==2){
+                            resul= (float) Math.sqrt(num2);
+                            System.out.println("La raiz cuadrada del numero " + num1 + " es:" + resul);
+                        }
+                        if (num1==3){
+                            resul=(float)Math.sqrt(num2);
+                            System.out.println("La raiz cuadrada del numero " + num2 + " es:" + resul);
+                        }
 
                     }catch (Exception error){
                         System.out.println("Error al realizar la operacion");
